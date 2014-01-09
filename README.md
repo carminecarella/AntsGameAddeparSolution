@@ -14,11 +14,11 @@ Board modeling
 To reach this goal I modeled the environment in MyAnt class as an object of Board class.
 The board can be represented as a collection of Square with several attributes:
 
-•	Coordinates x and y
-
-•	Amount of food
-
-•	Parent square, that is the square in which the ant was located before moving in this square
+	•	Coordinates x and y
+	
+	•	Amount of food
+	
+	•	Parent square, that is the square in which the ant was located before moving in this square
 
 Behavior/Role Ant modeling
 
@@ -28,11 +28,11 @@ Ant activities
 
 The ant has to do 3 things:
 
-•	Explore the surrounding environment
-
-•	Move towards next square (Path-finding algorithm:  the A* algorithm)
-
-•	Communicate with other ants
+	•	Explore the surrounding environment
+	
+	•	Move towards next square (Path-finding algorithm:  the A* algorithm)
+	
+	•	Communicate with other ants
 
 Each point is described below
 
@@ -40,17 +40,17 @@ Explore the surrounding environment
 
 The board is made up of:
 
-•	Anthill square: the starting square for the ant
+	•	Anthill square: the starting square for the ant
 
-•	Current square
+	•	Current square
 
-•	Two sets of unvisited square: they are food or plain square that the ant hasn’t visited yet. This set is a subset of the below map
+	•	Two sets of unvisited square: they are food or plain square that the ant hasn’t visited yet. This set is a subset of the below map
 
-•	A map of discovered squares, that it has seen (explore) walking on the board. It contains both visited squares and not visited ones.
+	•	A map of discovered squares, that it has seen (explore) walking on the board. It contains both visited squares and 	not visited ones.
 
 A map has a pair of K,V where 
 K is the key as the string contains coordinates x and y: x=-1 y=5 -> key is “-15”   
-V is the value as Square object related to the key/coordinates
+and V is the value as Square object related to the key/coordinates
 
 Each square has coordinates x and y calculated from the anthill square, example :
 The direction NORTH, EAST, SOUTH, WEST is calculated by the relative position from the current square, example: if the ant is on the square c with coordinates x = 0 and y = 2, the surrounding squares of c will be
@@ -62,11 +62,11 @@ The direction NORTH, EAST, SOUTH, WEST is calculated by the relative position fr
 
 Move towards next square
 
-•	Ant Role: FOOD BEARER. It has to go to the anthill to drop the food off. After dropping it off, the ant can start scouting the food again. The path towards anthill is created with the A* algorithm.
+	•	Ant Role: FOOD BEARER. It has to go to the anthill to drop the food off. After dropping it off, the ant can start scouting the food again. The path towards anthill is created with the A* algorithm.
 
-•	Ant Role: SCOUT. The ant hasn't collected food. It walks on board following a path until it reaches a food square, gathers food and changes its role becoming FOOD BEARER.
+	•	Ant Role: SCOUT. The ant hasn't collected food. It walks on board following a path until it reaches a food square, gathers food and changes its role becoming FOOD BEARER.
 
-•	Using the unvisited square sets, the algorithm selects the closest unvisited square giving priority to food square.
+	•	Using the unvisited square sets, the algorithm selects the closest unvisited square giving priority to food square.
 
 Communicate with other ants
 
