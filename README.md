@@ -3,6 +3,8 @@ AntsGameAddeparSolution
 
 Ants Game Addepar code challenge - my solution
 
+The code challenge description can be found on https://addepar.com/challenge/
+
 Solution Description
 
 An ant doesn’t know anything about surrounding environment, in order to move in it the ant has to discover “the world” and build its environment representation.
