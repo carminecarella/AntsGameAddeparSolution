@@ -1,4 +1,4 @@
-AntsGameAddeparSolution
+Ants Game Addepar Solution
 =======================
 
 Ants Game Addepar code challenge - my solution
